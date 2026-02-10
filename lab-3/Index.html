@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ITC505 Lab 3 - Custom Font</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>Lab 3: Serving a Custom Font</h1>
+
+<div class="content">
+    <p>
+        Web browsers usually display text using fonts that are already installed on a user’s computer.
+        This can be limiting if a website needs a specific or unique style.
+    </p>
+
+    <p>
+        To solve this, I served my own font directly from the web server using the CSS
+        <strong>@font-face</strong> rule. This rule allows a webpage to define a custom font and
+        tell the browser exactly where the font file is located.
+    </p>
+
+    <p>
+        When this page loads, the browser first downloads the HTML file and then the CSS file.
+        The CSS file points to the font file stored in the <em>fonts</em> folder.
+        The browser then requests that font file just like it would request an image or stylesheet.
+    </p>
+
+    <p>
+        Once the font is downloaded, the browser uses it to render the text on the page.
+        Because this font is unusual and not commonly installed, it is very easy to see that
+        the custom font has been loaded successfully.
+    </p>
+</div>
+
+<footer>
+    <p>Last updated:
+        <span id="lastModified"></span>
+    </p>
+</footer>
+
+<script type="text/javascript">
+    var x = document.lastModified;
+    document.getElementById("lastModified").textContent = x;
+</script>
+
+</body>
+</html>

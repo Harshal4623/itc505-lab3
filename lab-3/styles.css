@@ -1,0 +1,21 @@
+/* Tell the browser where to find the custom font */
+@font-face {
+    font-family: "RubikBeastly";
+    src: url("fonts/rubik-beastly.ttf") format("truetype");
+}
+
+/* Apply the font to the whole page */
+body {
+    font-family: "RubikBeastly", Arial, sans-serif;
+    margin: 25px;
+    line-height: 1.7;
+}
+
+h1 {
+    font-size: 42px;
+}
+
+.content {
+    border: 2px dashed black;
+    padding: 15px;
+}
