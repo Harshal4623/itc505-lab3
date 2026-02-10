@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ITC505 Lab 3 - Custom Font</title>
+
+  <!-- Connect this page to the CSS file -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <h1>ITC505 Lab 3: Serving a Custom Font</h1>
+
+  <p>
+    For this lab, I used a font that most computers will not already have.
+    Because of that, the browser cannot just “guess” the font from the user’s computer.
+    Instead, my website provides the font file to the browser, just like it provides images or other files.
+  </p>
+
+  <p>
+    Here is the basic process. First, the browser requests this HTML page. Then it sees the link to my CSS file.
+    Inside the CSS file, I used <code>@font-face</code> to define a custom font name and point to the font file
+    stored in my <code>fonts</code> folder. After the browser reads that rule, it makes an extra request to my server
+    to download the font file. Once the font downloads, the browser uses it to display the text on the page.
+  </p>
+
+  <p>
+    If the font file cannot load for some reason, my CSS includes a backup font (Arial) so the page is still readable.
+    But when it loads correctly, the text should look obviously different and “font-crazy.”
+  </p>
+
+  <!-- Required footer (keep exactly as given in the lab instructions) -->
+  <footer>
+      <p>Last updated:
+          <span id="lastModified"></span>
+      </p>
+  </footer>
+  <script type="text/javascript">
+       var x = document.lastModified;
+       document.getElementById('lastModified').textContent = x;
+  </script>
+</body>
+</html>
